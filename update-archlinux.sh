@@ -1,28 +1,31 @@
 #!/bin/bash
 clear
-echo -=-=-=-Instalação de complementos no archlinux -=-=-=-
+echo -e "\e[33;1m Instalação de complementos no archlinux\e[0m"
 sleep 6
-echo -=-=-=-Atualizando o Sistema-=-=-=-
+echo -e "\e[42;1m Atualizando o Sistema\e[0m"
+sudo pacman -Syu && sudo pacman -S git -y
+echo "\e[34;1m Instalando o AUR-Helper yay\e[0m"
+sleep 3
+git clone https://aur.archlinux.org/yay-git
+cd yay
+makepkg -si
 yay -Syu
-echo -=-=-=-Instalação de pacotes adicionais-=-=-=-
+echo "\e[35;1m Instalação de pacotes adicionais\e[0m"
 sleep 3
-yay -S conky-lua-nv lsb-release zsh okular ark spectacle gwenview kcalc kwalletmanager partitionmanager kalendar krdc skanlite ktorrent elisa kdevelop kdevelop-php kdevelop-python dolphin-plugins kdegraphics-thumbnailers kdegraphics-mobipocket testdisk dragon kamoso p7zip unrar isoimagewriter aic94xx-firmware linux-firmware-qlogic wd719x-firmware upd72020x-fw ffmpeg ffmpegthumbs ffmpegthumbnailer firefox firefox-i18n-pt-br libreoffice-fresh-pt-br aspell-pt libreoffice-extension-vero libreoffice-impress-templates ttf-ms-fonts ttf-ubuntu-font-family bluemail
-sleep 3
-#echo -=-=-=-Instalação pamac-aur -=-=-=-
-#yay -S pamac build mkinitcpio-firmware
-echo -=-=-=-Alteração do shell-=-=-=-
+yay -S conky-lua-nv lsb-release zsh okular ark spectacle gwenview kcalc kwalletmanager partitionmanager kalendar krdc skanlite ktorrent elisa kdevelop kdevelop-php kdevelop-python dolphin-plugins kdegraphics-thumbnailers kdegraphics-mobipocket testdisk dragon kamoso p7zip unrar isoimagewriter aic94xx-firmware linux-firmware-qlogic wd719x-firmware upd72020x-fw ffmpeg ffmpegthumbs ffmpegthumbnailer firefox firefox-i18n-pt-br libreoffice-fresh-pt-br aspell-pt libreoffice-extension-vero libreoffice-impress-templates ttf-ms-fonts ttf-ubuntu-font-family bluemail gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly vim
+echo "\e[36;1m Alterando o shell padrão para o zsh\e[0m"
 sleep 3
 chsh -s /bin/zsh
-echo -=-=-=-Instalação do pacote oh-my-zsh-=-=-=-
+echo "\e33;1m Instalação do pacote oh-my-zsh\e[0m"
 sleep 3
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-echo -=-=-=-Instalação de plugins ho-my-zsh-=-=-=-
+echo "\e31;1m Instalação de plugins ho-my-zsh\e[0m"
 sleep 3
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
-echo -=-=-=-Instalação de complementos bem sucedido...-=-=-=-
+echo "\e[32;1m Instalação de complementos bem sucedido...\e[0m"
 sleep 3
-echo -=-=-=-Aproveite a instalação-=-=-=-
+echo "\e[34;1m Aproveite a instalação\e[0m"
 sleep 3
 exit
