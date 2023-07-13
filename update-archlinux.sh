@@ -12,7 +12,7 @@ makepkg -si
 yay -Syu
 echo "\e[35;1m Instalação de pacotes adicionais\e[0m"
 sleep 3
-yay -S conky-lua-nv lsb-release zsh okular ark spectacle gwenview kcalc kwalletmanager partitionmanager kalendar krdc skanlite ktorrent elisa kdevelop kdevelop-php kdevelop-python dolphin-plugins kdegraphics-thumbnailers kdegraphics-mobipocket testdisk dragon kamoso p7zip unrar isoimagewriter aic94xx-firmware linux-firmware-qlogic wd719x-firmware upd72020x-fw ffmpeg ffmpegthumbs ffmpegthumbnailer firefox firefox-i18n-pt-br libreoffice-fresh-pt-br aspell-pt libreoffice-extension-vero libreoffice-impress-templates ttf-ms-fonts ttf-ubuntu-font-family bluemail gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly vim
+yay -S conky-lua lsb-release zsh okular ark spectacle gwenview kcalc kwalletmanager partitionmanager kalendar krdc skanlite ktorrent elisa kdevelop kdevelop-php kdevelop-python dolphin-plugins kdegraphics-thumbnailers kdegraphics-mobipocket testdisk dragon kamoso p7zip unrar isoimagewriter aic94xx-firmware linux-firmware-qlogic wd719x-firmware upd72020x-fw ffmpeg ffmpegthumbs ffmpegthumbnailer firefox firefox-i18n-pt-br libreoffice-fresh-pt-br aspell-pt libreoffice-extension-vero libreoffice-impress-templates ttf-ms-fonts ttf-ubuntu-font-family bluemail gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly vim yt-dlp yotube-dl
 echo "\e[36;1m Alterando o shell padrão para o zsh\e[0m"
 sleep 3
 chsh -s /bin/zsh
