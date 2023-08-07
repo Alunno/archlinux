@@ -7,7 +7,7 @@ sudo pacman -Syu && sudo pacman -S git -y && sudo pacman -Rsn plasma-meta -y
 echo "\e[34;1m Instalando o AUR-Helper yay\e[0m"
 sleep 3
 git clone https://aur.archlinux.org/yay-git
-cd yay
+cd $HOME/archlinux/yay-git/
 makepkg -si
 yay -Syu
 echo "\e[35;1m Instalação de pacotes adicionais\e[0m"
@@ -16,10 +16,10 @@ yay -S conky-lua lsb-release zsh testdisk p7zip unrar aic94xx-firmware linux-fir
 echo "\e[36;1m Alterando o shell padrão para o zsh\e[0m"
 sleep 3
 chsh -s /bin/zsh
-echo "\e33;1m Instalação do pacote oh-my-zsh\e[0m"
+echo "\e[33;1m Instalação do pacote oh-my-zsh\e[0m"
 sleep 3
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-echo "\e31;1m Instalação de plugins ho-my-zsh\e[0m"
+echo "\e[31;1m Instalação de plugins ho-my-zsh\e[0m"
 sleep 3
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
