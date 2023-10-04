@@ -12,7 +12,7 @@ makepkg -si --noconfirm
 yay -Syu --noconfirm
 echo -e "\e[35;1m Instalação de pacotes adicionais\e[0m"
 sleep 3
-yay -S conky-lua lsb-release zsh testdisk p7zip unrar aic94xx-firmware linux-firmware-qlogic wd719x-firmware upd72020x-fw ffmpeg ffmpegthumbs ffmpegthumbnailer firefox firefox-i18n-pt-br libreoffice-fresh-pt-br aspell-pt libreoffice-extension-vero libreoffice-impress-templates ttf-ms-fonts ttf-ubuntu-font-family thunderbird thunderbird-i18n-pt-br gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly vim yt-dlp yotube-dl ttf-roboto ttf-roboto-mono dosfstools nerd-fonts-git starship zsh-autocomplete-git zsh-syntax-highlighting-git zsh-autosuggestions-git pulsar-bin plymouth-git
+yay -S conky-lua lsb-release zsh testdisk p7zip unrar aic94xx-firmware linux-firmware-qlogic wd719x-firmware upd72020x-fw ffmpeg ffmpegthumbs ffmpegthumbnailer firefox firefox-i18n-pt-br libreoffice-fresh-pt-br aspell-pt libreoffice-extension-vero libreoffice-impress-templates ttf-ms-fonts ttf-ubuntu-font-family thunderbird thunderbird-i18n-pt-br gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly vim yt-dlp yotube-dl ttf-roboto ttf-roboto-mono dosfstools nerd-fonts-git starship zsh-autocomplete-git zsh-syntax-highlighting-git zsh-autosuggestions-git pulsar-bin plymouth-git bluedevil breeze-gtk drkonqi kde-gtk-config kdeplasma-addons kgamma5 khotkeys kinfocenter kscreen ksshaskpass kwallet-pam kwayland-integration kwrited oxygen oxygen-sounds plasma-browser-integration plasma-desktop plasma-disks plasma-firewall plasma-nm plasma-pa plasma-systemmonitor plasma-thumderbolt plasma-vault plasma-welcome plasma-workspace-wallpapers powerdevil sddm-kcm xdg-desktop-portal-kde breeze-grub breeze-plymouth flatpack-kcm plasma-sdk plymouth-kcm okular ark spectacle gwenview kcalc skanlite partitionmanager elisa krdc ktorrent kamoso kalendar isoimagewriter smbclient gvfs gvfs-goa gvfs-google gvfs-smb sshfsgvfs gvfs-goa gvfs-google gvfs-smb sshfsntfs-3g octopi octopi-notifier-frameworks epson-inkjet-printer-escpr cups ghostscript gsfonts gst-ffmpeg gstreamer kdegraphics-thumbnailers kdegraphics-mobipocket
 echo -e "\e[36;1m Alterando o shell padrão para o zsh\e[0m"
 sleep 3
 chsh -s /bin/zsh
@@ -26,6 +26,6 @@ chsh -s /bin/zsh
 #git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions
 echo -e "\e[32;1m Instalação de complementos bem sucedido...\e[0m"
 sleep 3
-echo -e "\e[34;1m Aproveite a instalação\e[0m"
+echo -e "\e[34;1m Aproveite o seu novo sistema!\e[0m"
 sleep 3
 exit
