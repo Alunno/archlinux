@@ -3,7 +3,7 @@ clear
 echo -e "\e[33;1m Instalação de complementos no archlinux\e[0m"
 sleep 6
 echo -e "\e[42;1m Atualizando o Sistema\e[0m"
-sudo pacman -Syu && sudo pacman -S git -y && sudo pacman -Rsn epiphany gnome-music gnome-contacts gnome-maps gnome-characters gnome-tour gnome-weather gnome-software
+sudo pacman -Syu && sudo pacman -S git -y && sudo pacman -Rsn plasma-meta discover
 echo -e "\e[34;1m Instalando o AUR-Helper yay\e[0m"
 sleep 3
 git clone https://aur.archlinux.org/yay-git
