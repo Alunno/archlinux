@@ -24,6 +24,9 @@ sleep 3
 cd $HOME/archlinux/
 cp starship.toml $HOME/.config/
 cp zshrc $HOME/.zshrc
+echo -e "\e[36;1m Reiniciando modprobe da camera!\e[0m"
+sleep 3
+sudo modprobe -r uvcvideo && sudo modprobe uvcvideo
 echo -e "\e[32;1m Instalação de complementos bem sucedido...\e[0m"
 sleep 3
 echo -e "\e[34;1m Reinicie o sistema!\e[0m"
