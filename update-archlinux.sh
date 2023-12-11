@@ -19,6 +19,9 @@ yay -S --noconfirm conky-lua lsb-release zsh testdisk p7zip unrar aic94xx-firmwa
 echo -e "\e[36;1m Alterando o shell padrão para o zsh\e[0m"
 sleep 3
 chsh -s /bin/zsh
+echo -e "\e[36;1m Reiniciando modprobe da camera!\e[0m"
+sleep 3
+sudo modprobe -r uvcvideo && sudo modprobe uvcvideo
 echo -e "\e[32;1m Instalação de complementos bem sucedido...\e[0m"
 sleep 3
 echo -e "\e[34;1m Aproveite o seu novo sistema!\e[0m"
