@@ -15,7 +15,7 @@ sleep 3
 yay -S --noconfirm file-roller secrets fragments impression evolution evolution-ews evolution-data-server evolution-on evolution-spamassassin gnome-browser-connector
 echo -e "\e[35;1m Instalação de pacotes adicionais\e[0m"
 sleep 3
-yay -S --noconfirm conky-lua lsb-release zsh testdisk p7zip unrar unzip zip aic94xx-firmware linux-firmware-qlogic wd719x-firmware upd72020x-fw ffmpeg ffmpegthumbs ffmpegthumbnailer firefox firefox-i18n-pt-br libreoffice-fresh-pt-br aspell-pt libreoffice-extension-vero libreoffice-impress-templates ttf-ms-fonts ttf-ubuntu-font-family gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly vim yt-dlp yotube-dl ttf-roboto ttf-roboto-mono dosfstools nerd-fonts-git starship zsh-autocomplete-git zsh-syntax-highlighting-git zsh-autosuggestions-git pulsar-bin plymouth smbclient gvfs gvfs-goa gvfs-google gvfs-smb sshfsgvfs gvfs-goa gvfs-google gvfs-smb sshfs ntfs-3g pamac-aur epson-inkjet-printer-escpr cups ghostscript gsfonts gst-ffmpeg gstreamer yaru-sound-theme checkupdates-with-aur
+yay -S --noconfirm conky-lua lsb-release zsh testdisk p7zip unrar unzip zip aic94xx-firmware linux-firmware-qlogic wd719x-firmware upd72020x-fw ffmpeg ffmpegthumbs ffmpegthumbnailer firefox firefox-i18n-pt-br libreoffice-fresh-pt-br aspell-pt libreoffice-extension-vero libreoffice-impress-templates ttf-ms-fonts ttf-ubuntu-font-family gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly vim yt-dlp yotube-dl ttf-roboto ttf-roboto-mono dosfstools nerd-fonts-git starship zsh-autocomplete-git zsh-syntax-highlighting-git zsh-autosuggestions-git pulsar-bin plymouth smbclient gvfs gvfs-goa gvfs-google gvfs-smb sshfsgvfs gvfs-goa gvfs-google gvfs-smb sshfs ntfs-3g pamac-aur epson-inkjet-printer-escpr cups ghostscript gsfonts gst-ffmpeg gstreamer yaru-sound-theme checkupdates-with-aur teams-for-linux
 echo -e "\e[36;1m Alterando o shell padrão para o zsh\e[0m"
 sleep 3
 chsh -s /bin/zsh
@@ -26,9 +26,11 @@ cp starship.toml $HOME/.config/
 cp zshrc $HOME/.zshrc
 echo -e "\e[36;1m Reiniciando modprobe da camera!\e[0m"
 sleep 3
-sudo modprobe -r uvcvideo && sudo modprobe uvcvideo
+sudo modprobe -r uvcvideo
+sudo modprobe uvcvideo
 echo -e "\e[32;1m Instalação de complementos bem sucedido...\e[0m"
 sleep 3
-echo -e "\e[34;1m Reinicie o sistema!\e[0m"
-sleep 3
+echo -e "\e[34;1m Reiniciar é preciso. Aguarde...!\e[0m"
+sleep 6
+reboot
 exit
