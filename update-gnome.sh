@@ -44,17 +44,12 @@ sudo modprobe -r uvcvideo
 sudo modprobe uvcvideo
 echo -e "${GREEN} Criando diretório autostart caso não exista. ${OFF}"
 sleep 3
-if [ ! -d $HOME/.config/autostart }; then
-	echo 'Criando diretorio.'
-	mkdir autostart
-	
-	if [ "$?" -eq "0" ]; then
-		echo 'Diretório criado com sucesso...'
-		else
-			echo 'Erro ao criar diretorio.'
-		fi
+if [ -e "/home/edison/.config/autostart" ]
+then
+	echo "O diretório já existe."
 	else
-		echo 'Diretório já existe.'
+	echo "O diretório não existe e será criado."
+	mkdir -p /home/edison/.config/autostart/
 	fi
 echo -e "${YELLOW} Copiando arquivos para o diretório autostart. ${OFF}"
 sleep 3
