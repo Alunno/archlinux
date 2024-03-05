@@ -25,7 +25,7 @@ sleep 3
 yay -S --noconfirm file-roller secrets fragments impression evolution evolution-ews evolution-data-server evolution-on evolution-spamassassin gnome-browser-connector
 echo -e "${GREEN} Instalação de pacotes adicionais ${OFF}"
 sleep 3
-yay -S --noconfirm conky-lua lsb-release zsh testdisk p7zip unrar unzip zip aic94xx-firmware linux-firmware-qlogic wd719x-firmware upd72020x-fw ffmpeg ffmpegthumbs ffmpegthumbnailer firefox firefox-i18n-pt-br libreoffice-fresh-pt-br aspell-pt libreoffice-extension-vero libreoffice-impress-templates ttf-ms-fonts ttf-ubuntu-font-family gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly vim yt-dlp youtube-dl ttf--nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-roboto ttf-roboto-mono dosfstools ttf-font-logos ttf-font-awesome-5 starship zsh-autocomplete-git zsh-syntax-highlighting-git zsh-autosuggestions-git pulsar-bin plymouth smbclient gvfs gvfs-goa gvfs-google gvfs-smb sshfs gvfs gvfs-goa gvfs-google gvfs-smb sshfs ntfs-3g pamac-aur epson-inkjet-printer-escpr cups ghostscript gsfonts gst-ffmpeg gstreamer yaru-sound-theme checkupdates-with-aur teams-for-linux hunspell-pt-br gimp lollypop shc unshc
+yay -S --noconfirm conky-lua lsb-release zsh testdisk p7zip unrar unzip zip aic94xx-firmware linux-firmware-qlogic wd719x-firmware upd72020x-fw ffmpeg ffmpegthumbs ffmpegthumbnailer firefox firefox-i18n-pt-br libreoffice-fresh-pt-br aspell-pt libreoffice-extension-vero libreoffice-impress-templates ttf-ms-fonts ttf-ubuntu-font-family gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly vim yt-dlp youtube-dl ttf--nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-roboto ttf-roboto-mono dosfstools ttf-font-logos ttf-font-awesome-5 starship zsh-autocomplete-git zsh-syntax-highlighting-git zsh-autosuggestions-git pulsar-bin plymouth smbclient gvfs gvfs-goa gvfs-google gvfs-smb sshfs gvfs gvfs-goa gvfs-google gvfs-smb sshfs ntfs-3g pamac-aur epson-inkjet-printer-escpr cups ghostscript gsfonts gst-ffmpeg gstreamer yaru-sound-theme checkupdates-with-aur hunspell-pt-br gimp lollypop shc unshc
 echo -e "${YELLOW} Alterando o shell padrão para o zsh ${OFF}"
 sleep 3
 chsh -s /bin/zsh
@@ -55,7 +55,6 @@ echo -e "${YELLOW} Copiando arquivos para o diretório autostart. ${OFF}"
 sleep 3
 cd /$HOME/archlinux/
 cp conky.desktop $HOME/.config/autostart/
-cp teams-for-linux.desktop $HOME/.config/autostart
 cp evolution.desktop $HOME/.config/autostart
 cp conkyrc $HOME/.conkyrc
 cp draw_bg.lua $HOME/.draw_bg.lua
