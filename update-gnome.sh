@@ -63,8 +63,9 @@ echo -e "${YELLOW} instalando greeter logo gdm ${OFF}"
 sleep 3
 cd /$HOME/archlinux/
 sudo mkdir -p /etc/dconf/profile/ && sudo cp gdm /etc/dconf/profile/
-sudo cp 01-logo /etc/dconf/db/ && sudo cp greeter-logo.png /usr/share/pixmaps/
+sudo mkdir -p /etc/dconf/db/gdm.d/ && sudo cp 01-logo /etc/dconf/db/gdm.d/ && sudo cp greeter-logo.png /usr/share/pixmaps/
 sudo cp eu.jpg /usr/share/pixmaps/faces/
+sudo dconf update
 echo -e "${YELLOW} Instalar papeis de parede personalizados. ${OFF}"
 sleep 3
 cd /$HOME/archlinux/
