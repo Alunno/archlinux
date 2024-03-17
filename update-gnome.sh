@@ -65,6 +65,10 @@ cd /$HOME/archlinux/
 sudo mkdir -p /etc/dconf/profile/ && sudo cp gdm /etc/dconf/profile/
 sudo cp 01-logo /etc/dconf/db/ && sudo cp greeter-logo.png /usr/share/pixmaps/
 sudo cp eu.jpg /usr/share/pixmaps/faces/
+echo -e "${YELLOW} Instalar papeis de parede personalizados. ${OFF}"
+sleep 3
+cd /$HOME/archlinux/
+sudo mkdir -p /usr/share/backgrounds/division/ && sudo cp black.png orange.png /usr/share/backgrounds/division/ && sudo cp division.xml /usr/share/gnome-background-properties/
 echo -e "${RED} Instalação de complementos bem sucedido... ${OFF}"
 sleep 3
 echo -e "${YELLOW} Reiniciando o sistema. Aguarde...! ${OFF}"
