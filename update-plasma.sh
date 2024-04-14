@@ -29,7 +29,8 @@ sleep 3
 chsh -s /bin/zsh
 echo -e "${YELLOW} Instalação de arquivos de configuração do zsh ${OFF}"
 sleep 3
-cd $HOME/archlinux/ && cp starship.toml $HOME/.config/ && cp zshrc $HOME/.zshrc
+#cd $HOME/archlinux/ && cp starship.toml $HOME/.config/
+cp zshrc $HOME/.zshrc && cp vimrc $HOME/.vimrc
 echo -e "${RED} Atualizando mais algumas coisas ${OFF}"
 sleep 3
 sudo systemctl enable --now bluetooth.service cups.service && sudo fc-cache -v -f
