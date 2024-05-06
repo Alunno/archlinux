@@ -32,8 +32,6 @@ chsh -s /bin/zsh
 echo -e "${RED} Atualizando mais algumas coisas ${OFF}"
 sleep 3
 sudo systemctl enable --now bluetooth.service cups.service && sudo fc-cache -v -f
-echo -e "${YELLOW} Instalando configurações do conky ${OFF}"
-sleep 3
 cd /$HOME/archlinux/
 cp conkyrc $HOME/.conkyrc
 cp draw_bg.lua $HOME/.draw_bg.lua
