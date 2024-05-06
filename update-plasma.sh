@@ -39,6 +39,7 @@ cp conkyrc $HOME/.conkyrc
 cp draw_bg.lua $HOME/.draw_bg.lua
 cp Iniciar_Conky.sh $HOME/.Iniciar_Conky.sh
 cp vimrc $HOME/.vimrc && cp zshrc $HOME/.zshrc
+sudo cp eu.png /usr/share/plasma/avatars/
 echo -e "${GREEN} Reiniciando modprobe da camera! ${OFF}"
 sleep 3
 sudo modprobe -r uvcvideo && sudo modprobe uvcvideo
