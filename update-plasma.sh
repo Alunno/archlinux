@@ -17,7 +17,7 @@ sleep 3
 sudo pacman -Rsnc plasma-meta htop
 echo -e "${RED} Instalando complementos do kde-plasma ${OFF}"
 sleep 3
-sudo pacman -S --noconfirm --needed bluedevil breeze-gtk drkonqi kde-gtk-config kdeplasma-addons kgamma kinfocenter kscreen ksshaskpass kwallet-pam kwrited ocean-sound-theme oxygen oxygen-sounds plasma-browser-integration plasma-desktop plasma-disks plasma-firewall plasma-nm plasma-pa plasma-systemmonitor plasma-thunderbolt plasma-vault plasma-welcome plasma-workspace-wallpapers powerdevil print-manager sddm-kcm xdg-desktop-portal-kde breeze-plymouth plasma-sdk gwenview spectacle ark okular kcalc skanlite partitionmanager elisa krdc ktorrent kamoso kmail kamail-account-wizard
+sudo pacman -S --noconfirm --needed bluedevil breeze-gtk drkonqi kde-gtk-config kdeplasma-addons kgamma kinfocenter kscreen ksshaskpass kwallet-pam kwrited ocean-sound-theme oxygen oxygen-sounds plasma-browser-integration plasma-desktop plasma-disks plasma-firewall plasma-nm plasma-pa plasma-systemmonitor plasma-thunderbolt plasma-vault plasma-welcome plasma-workspace-wallpapers powerdevil print-manager sddm-kcm xdg-desktop-portal-kde breeze-plymouth plasma-sdk gwenview spectacle ark okular kcalc skanlite partitionmanager elisa krdc ktorrent kamoso kmail kamail-account-wizard kdegraphics-mobipocket kdegraphics-thumbnailers
 echo -e "${GREEN} Instalando o AUR-Helper yay ${OFF}"
 sleep 3
 git clone https://aur.archlinux.org/yay-git
