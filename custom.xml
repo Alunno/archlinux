@@ -49,4 +49,36 @@
     <pcolor>#3071AE</pcolor>
     <scolor>#000000</scolor>
   </wallpaper>
+  <wallpaper deleted="false">
+    <name>Default anime-girl-kimono</name>
+    <filename>/usr/share/backgrounds/custom/anime-girl-kimono.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#3071AE</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
+    <name>Default girl-studying-headphones</name>
+    <filename>/usr/share/backgrounds/custom/girl-studying-headphones.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#3071AE</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
+    <name>Default john-wick</name>
+    <filename>/usr/share/backgrounds/custom/john-wick.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#3071AE</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
+    <name>Default sci-fi-girl</name>
+    <filename>/usr/share/backgrounds/custom/sci-fi-girl.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#3071AE</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
 </wallpapers>  
