@@ -46,5 +46,21 @@ ${voffset 5}${color1}${font Symbols Nerd Font:size=14}${color}${font} Host: $
 ${voffset 7}${color1}${font Symbols Nerd Font:size=14}${color}${font} Kernel: ${kernel}${color}
 ${voffset 7}${color1}${font Symbols Nerd Font:size=14}${color}${font} ${execi 99999 lsb_release -ds}${color}
 ${voffset 7}${color1}${font Symbols Nerd Font:size=14}${color}${font} Estado do sistema: ${execpi 1500 checkupdates-with-aur | awk 'END { print (NR == 0 ? "Sistema atualizado" : NR " pacotes" (NR > 1 ? "s" : "")); }'}${color}
-
+${voffset 10}${color2}${font Symbols Nerd Font:size=18}󰻠${color}${color1}${font} CPUs ${color}
+${voffset -8}${hr}
+${voffset 5}${color1}${font Symbols Nerd Font:size=14}${color}${font} CPU(0): ${color}${freq_g cpu0}ghz${color}${alignr}${cpugraph 10,200 FF9933 99004C cpu cpu0}${color}
+${offset 5}${color1}${cpubar 15,width_cpu_bar cpu0}${alignr 150}${color1}${voffset 5}${cpu cpu0}% ${color}
+${voffset 7}${color1}${font Symbols Nerd Font:size=14}${color}${font} CPU(1): ${color}${freq_g cpu1}ghz${color}${alignr}${cpugraph 10,200 FF9933 99004C cpu cpu1}${color}
+${offset 5}${color2}${cpubar 15,width_cpu_bar cpu1}${alignr 150}${color1}${voffset 5}${cpu cpu1}% ${color}
+${voffset 7}${color1}${font Symbols Nerd Font:size=14}${color}${font} CPU(2): ${color}${freq_g cpu2}ghz${color}${alignr}${cpugraph 10,200 FF9933 99004C cpu cpu2}${color}
+${offset 5}${color1}${cpubar 15,width_cpu_bar cpu2}${alignr 150}${color1}${voffset 5}${cpu cpu2}% ${color}
+${voffset 7}${color1}${font Symbols Nerd Font:size=14}${color}${font} CPU(3): ${color}${freq_g cpu3}ghz${color}${alignr}${cpugraph 10,200 FF9933 99004C cpu cpu3}${color}
+${offset 5}${color2}${cpubar 15,width_cpu_bar cpu3}${alignr 150}${color1}${voffset 5}${cpu cpu3}% ${color}
+${voffset 10}${color2}${font Symbols Nerd Font:size=18}${color}${color1}${font} MEMORIAS ${color}
+${voffset -8}${hr}
+${voffset 10}${color1}${font Symbols Nerd Font:size=14}${font}${color} Ram: ${color4}${memmax}${goto 125}${color}em uso: ${color4}${mem}${goto 240}${color}livre: ${color4}${memfree}${color}
+${offset 5}${color2}${membar 20,width_mem_bar}${color}
+${offset 7}${color1}${font Symbols Nerd Font:size=14}󰣁${font}${color} Swap: ${color4}${swapmax}${goto 130}${color}em uso: ${color4}${swap}${goto 210}${color}livre: ${color4}${memfree}${color}
+${offset 5}${color2}${swapbar 20,width_swap_bar}${color}
+${voffset 50}
 ]]
