@@ -1,0 +1,50 @@
+conky.config = {
+	use_xft = true,
+	xftalpha = 0.8,
+	update_interval = 1.0,
+    	total_run_times = 0,
+    	own_window = true,
+    	own_window_transparent = true,
+    	own_window_argb_visual = true,
+    	own_window_type = 'normal',
+    	own_window_class = 'conky',
+    	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    	background = false,
+    	double_buffer = true,
+    	imlib_cache_size = 0,
+    	no_buffers = true,
+    	uppercase = false,
+    	cpu_avg_samples = 2,
+    	override_utf8_locale = true,
+    	font = 'Ubuntu Mono:size=10',
+
+    	-- placement
+    	alignment = 'top_right',
+    	gap_x = 10,
+    	gap_y = 10,
+
+    	 minimum_width = 220,
+         maximum_width = 600,
+
+    	-- default drawing
+    	draw_shades = false,
+    	draw_outline = true,
+    	draw_borders = false,
+    	draw_graph_borders = false,
+
+	color1 = '#FF5733',
+	color2 = '#2e86c1',
+
+        --lua_load = '/home/edison/.draw_bg.lua',
+    	--lua_draw_hook_post = 'draw_bg',
+};
+
+conky.text = [[
+${voffset 10}${color2}${font Symbols Nerd Font:size=18}󰣇${color}${color1}${font} SISTEMA ${color}
+${voffset -8}${hr}
+${voffset 5}${color1}${font Symbols Nerd Font:size=14}${color}${font} Host: ${nodename}${color}
+${voffset 7}${color1}${font Symbols Nerd Font:size=14}${color}${font} Kernel: ${kernel}${color}
+${voffset 7}${color1}${font Symbols Nerd Font:size=14}${color}${font} ${execi 99999 lsb_release -ds}${color}
+${voffset 7}${color1}${font Symbols Nerd Font:size=14}${color}${font} Estado do sistema: ${execpi 1500 checkupdates-with-aur | awk 'END { print (NR == 0 ? "Sistema atualizado" : NR " pacotes" (NR > 1 ? "s" : "")); }'}${color}
+
+]]
