@@ -23,8 +23,6 @@ LOCATION=$HOME/.config/autostart
 clear
 echo -e "${LCYAN} INSTALANDO COMPLEMENTOS ARCH(GNOME). ${OFF}"
 sleep 6
-echo -e "${GREEN} ATUALIZANDO E REMOVENDO APPS DESNECESSÁRIOS. ${OFF}"
-sudo pacman -Syu --noconfirm && sudo pacman -Rsnc --noconfirm gnome-contacts gnome-maps gnome-weather gnome-characters gnome-clocks gnome-software gnome-music epiphany htop gnome-tour
 echo -e "${GREEN} INSTALANDO O AUR-HELPER(YAY). ${OFF}"
 sleep 3
 git clone https://aur.archlinux.org/yay-git
@@ -36,7 +34,7 @@ sleep 3
 yay -S --noconfirm file-roller secrets fragments impression evolution evolution-ews evolution-data-server evolution-on evolution-spamassassin gnome-browser-connector
 echo -e "${PURPLE} INSTALANDO PACOTES ADICIONAIS. ${OFF}"
 sleep 3
-yay -S --noconfirm --needed conky-lua-nv lsb-release zsh testdisk p7zip unrar unzip zip aic94xx-firmware linux-firmware-qlogic wd719x-firmware upd72020x-fw ffmpeg ffmpegthumbs ffmpegthumbnailer firefox firefox-i18n-pt-br libreoffice-fresh-pt-br libreoffice-extension-vero libreoffice-impress-templates aspell-pt ttf-ms-fonts ttf-ubuntu-font-family ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-roboto ttf-roboto-mono dosfstools ttf-font-logos ttf-font-awesome-5 gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly vim yt-dlp youtube-dl starship zsh-autocomplete-git zsh-syntax-highlighting-git zsh-autosuggestions-git plymouth smbclient gvfs gvfs-goa gvfs-google gvfs-smb sshfs gvfs gvfs-goa gvfs-google gvfs-smb sshfs ntfs-3g epson-inkjet-printer-escpr cups ghostscript gsfonts gst-ffmpeg gstreamer ocean-sound-theme checkupdates-with-aur hunspell-pt-br gimp rhythmbox shc unshc linux-headers archlinux-appstream-data fwupd gnome-shell-extension-arch-update pulsar-bin
+yay -S --noconfirm --needed conky-lua-nv lsb-release zsh testdisk p7zip unrar unzip zip aic94xx-firmware linux-firmware-qlogic wd719x-firmware upd72020x-fw ffmpeg ffmpegthumbs ffmpegthumbnailer firefox firefox-i18n-pt-br libreoffice-fresh-pt-br libreoffice-extension-vero libreoffice-impress-templates aspell-pt ttf-ms-fonts ttf-ubuntu-font-family ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-roboto ttf-roboto-mono dosfstools ttf-font-logos ttf-font-awesome-5 gst-plugins-base gst-plugins-good gst-plugins-bad gst-plugins-ugly vim yt-dlp youtube-dl starship zsh-autocomplete-git zsh-syntax-highlighting-git zsh-autosuggestions-git plymouth smbclient gvfs gvfs-goa gvfs-google gvfs-smb sshfs gvfs gvfs-goa gvfs-google gvfs-smb sshfs ntfs-3g epson-inkjet-printer-escpr cups ghostscript gsfonts gst-ffmpeg gstreamer ocean-sound-theme checkupdates-with-aur hunspell-pt-br gimp lollypop shc unshc linux-headers archlinux-appstream-data fwupd gnome-shell-extension-arch-update pulsar-bin python-pipx
 echo -e "${YELLOW} ALTERAÇÃO DO SHELL PADRÃO PARA O (ZSH). ${OFF}"
 sleep 3
 chsh -s /bin/zsh
@@ -94,6 +92,9 @@ cd /$HOME/archlinux/gnome-shell-extension-appindicator-git && makepkg -si --noco
 git clone https://aur.archlinux.org/gnome-shell-extension-dash-to-panel-git.git
 cd /$HOME/archlinux/gnome-shell-extension-dash-to-panel-git && makepkg -si --noconfirm
 echo -e "${WHITE} INSTALAÇÃO DE COMPLEMENTOS BEM SUCEDIDO... ${OFF}"
+sleep 3
+echo -e "${GREEN} ATUALIZANDO E REMOVENDO APPS DESNECESSÁRIOS. ${OFF}"
+sudo pacman -Syu --noconfirm && sudo pacman -Rsnc --noconfirm gnome-contacts gnome-maps gnome-weather gnome-characters gnome-clocks gnome-software gnome-music epiphany htop gnome-tour
 sleep 3
 echo -e "${LRED} AGUARDE O REINICIO DO SISTEMA...! ${OFF}"
 sleep 6
