@@ -85,16 +85,20 @@ echo -e "${LPURPLE} INSTALANDO EXTENSÕES DO GNOME... ${OFF}"
 sleep 3
 git clone https://aur.archlinux.org/gnome-shell-extension-desktop-icons-ng-git.git
 cd /$HOME/archlinux/gnome-shell-extension-desktop-icons-ng-git && makepkg -si --noconfirm
+cd ..
 git clone https://aur.archlinux.org/gnome-shell-extension-bluetooth-battery-meter-git.git
 cd /$HOME/archlinux/gnome-shell-extension-bluetooth-battery-meter-git && makepkg -si --noconfirm
+cd ..
 git clone https://aur.archlinux.org/gnome-shell-extension-appindicator-git.git
 cd /$HOME/archlinux/gnome-shell-extension-appindicator-git && makepkg -si --noconfirm
+cd ..
 git clone https://aur.archlinux.org/gnome-shell-extension-dash-to-panel-git.git
 cd /$HOME/archlinux/gnome-shell-extension-dash-to-panel-git && makepkg -si --noconfirm
+cd ..
 echo -e "${WHITE} INSTALAÇÃO DE COMPLEMENTOS BEM SUCEDIDO... ${OFF}"
 sleep 3
 echo -e "${GREEN} ATUALIZANDO E REMOVENDO APPS DESNECESSÁRIOS. ${OFF}"
-sudo pacman -Syu --noconfirm && sudo pacman -Rsnc --noconfirm gnome-contacts gnome-maps gnome-weather gnome-characters gnome-clocks gnome-software gnome-music epiphany htop gnome-tour
+yay -Syu --noconfirm && yay -Rsnc --noconfirm gnome-contacts gnome-maps gnome-weather gnome-characters gnome-clocks gnome-software gnome-music epiphany htop gnome-tour fontforge
 sleep 3
 echo -e "${LRED} AGUARDE O REINICIO DO SISTEMA...! ${OFF}"
 sleep 6
