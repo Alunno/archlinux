@@ -1,0 +1,15 @@
+{
+    "KPlugin": {
+        "Authors": [
+		{
+        "Email":"edisonsilvaf@protom.me",
+        "Name":"Edison Filho"
+		}
+        ],
+        "Id": "Chinesa",
+        "License": "CC-BY-SA-4.0",
+        "Name": "Chinesa"
+
+    },
+    "X-KDE-PlasmaImageWallpaper-AccentColor": "red"
+}

@@ -1,0 +1,15 @@
+{
+    "KPlugin": {
+        "Authors": [
+		{
+        "Email":"edisonsilvaf@protom.me",
+        "Name":"Edison Filho"
+		}
+        ],
+        "Id": "Estradas",
+        "License": "CC-BY-SA-4.0",
+        "Name": "Estradas"
+
+    },
+    "X-KDE-PlasmaImageWallpaper-AccentColor": "red"
+}

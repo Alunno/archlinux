@@ -1,0 +1,13 @@
+# openweathermap(API Key):
+appid=ef65da0a9ca6a3e7b3c90097eb86511d
+
+# Posição geografica
+lat=23.9631
+lon=46.3919
+
+# linguagem
+lang=pt_br
+
+# unidade de medida
+units=metric
+

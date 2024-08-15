@@ -1,27 +1,15 @@
---[[ Background by londonali1010 (2009)
-
-This script draws a background to the Conky window. It covers the whole of the Conky window, but you can specify rounded corners, if you wish.
-
-To call this script in Conky, use (assuming you have saved this script to ~/scripts/):
-	lua_load ~/scripts/draw_bg.lua
-	lua_draw_hook_pre draw_bg
-
-Changelog:
-+ v1.0 -- Original release (07.10.2009)
-]]
-
--- Change these settings to affect your background.
--- "corner_r" is the radius, in pixels, of the rounded corners. If you don't want rounded corners, use 0.
-
+-- cantos, use 0.
+-- Cantos arredondados
 corner_r=20
 
--- Set the colour and transparency (alpha) of your background.
+-- Defina a cor e a transparência (alfa) do seu plano de fundo.
 
 bg_colour=0x131416
 bg_alpha=0.80
 
 require 'cairo'
 require 'cairo_xlib'
+
 function rgb_to_r_g_b(colour,alpha)
 	return ((colour / 0x10000) % 0x100) / 255., ((colour / 0x100) % 0x100) / 255., (colour % 0x100) / 255., alpha
 end

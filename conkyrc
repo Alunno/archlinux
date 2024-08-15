@@ -1,7 +1,7 @@
 conky.config = {
     use_xft = true,
 	xftalpha = 0.8,
-	update_interval = 1.0,
+	update_interval = 0.5,
     	total_run_times = 0,
     	own_window = true,
     	own_window_transparent = true,
@@ -16,7 +16,7 @@ conky.config = {
     	uppercase = false,
     	cpu_avg_samples = 2,
     	override_utf8_locale = true,
-    	font = 'Ubuntu Mono:size=10',
+    	font = 'Ubuntu Condensed:size=10',
     	draw_shades = true,
 
     	-- placement
@@ -24,8 +24,9 @@ conky.config = {
     	gap_x = 10,
     	gap_y = 45,
 
-    	 minimum_width = 250, minimum_height = 500,
-         maximum_width = 600,
+    	 minimum_height = 250,
+    	 minimum_width = 250,
+         maximum_width = 250,
 
     	-- default drawing
     	draw_shades = false,
@@ -34,59 +35,71 @@ conky.config = {
     	draw_graph_borders = false,
 
     	--Cores
-    	color0 = '#212f3c',
-    	color1 = '#fdfefe',
-    	color2 = '#3498db',
-    	color3 = '#138d75',
-    	color4 = '#7fb3d5',
+    	default_color = '#080808',
+	color0 = '#B0E0E6', 
+	color1 = '#eaffff', 
+	color2 = 'gold', 
+	color3 = '#ffffff', 
+	color4 = '#00BCD4',
+	color5 = '#080808', 
+	color6 = 'yellow',
+	color7 = '#1F7411',  	--verde
+	color8 = '#FFA726',  	--laranja
+	color9 = '#F1544B',  	--tijolo
 
-    	 lua_load = '/home/edison/.draw_bg.lua',
+    	 lua_load = '/home/edison/.bargraph_small.lua',
+    	 lua_draw_hook_post = 'main_bars',
     	 lua_draw_hook_pre = 'draw_bg',
 }
 conky.text = [[
-${offset 5}${voffset 4}${color3}S.I.S.T.E.M.A ${color}${color2}${stippled_hr 2}${color}
-${offset 10}${voffset 4}CPU: ${color4}${execi 1000 cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq}${color}
-${offset 10}${voffset 4}Kernel: ${color4}${kernel}${color}${alignr}Distro: ${color4}${execi 99999 lsb_release -ds}${color}
-${offset 10}${voffset 4}Usuário: ${color4}${exec whoami}${alignr}${execpi 1800 checkupdates-with-aur | awk 'END { print (NR == 0 ? "Sistema atualizado" : NR " package" (NR > 1 ? "s" : "")); }'}
+${offset 5}${voffset 4}${color3}SISTEMA ${color4}${stippled_hr 2}${color}
+${offset 10}${voffset 4}${color3}OS: ${alignr}${color2}${execi 10000 lsb_release -d | cut -f 2| tr "[:upper:]" "[:upper:]"}${color}
+${offset 10}${voffset 4}${color3}Kernel: ${alignr}${color2}${kernel}${color}
+${offset 10}${voffset 4}${color3}Usuário: ${alignr}${color2}${exec whoami}${color}
+${offset 10}${voffset 4}${color3}Área de trabalho:${color2}${alignr}${if_match "$desktop"!="Not running in X"}(${desktop}/${desktop_number})${endif}: ${desktop_name}${color}
 #
-${offset 5}${voffset 10}${color3}C.O.R.E.S ${color}${color2}${stippled_hr 2}${color}
-${offset 5}${voffset 10}CPU(0): ${color4}${freq_g cpu0}ghz${color}${alignr}${cpugraph 10,200 FF9933 99004C cpu cpu0}${color}
-${offset 5}${color2}${cpubar 15,width_cpu_bar cpu0}${alignr 150}${color1}${voffset 5}${cpu cpu0}% ${color}
-${offset 5}${voffset 10}CPU(1): ${color4}${freq_g cpu1}ghz${color}${alignr}${cpugraph 10,200 FF9933 99004C cpu cpu1}${color}
-${offset 5}${color2}${cpubar 15,width_cpu_bar cpu1}${alignr 150}${color1}${voffset 5}${cpu cpu1}% ${color}
-${offset 5}${voffset 10}CPU(2): ${color4}${freq_g cpu2}ghz${color}${alignr}${cpugraph 10,200 FF9933 99004C cpu cpu2}${color}
-${offset 5}${color2}${cpubar 15,width_cpu_bar cpu2}${alignr 150}${color1}${voffset 5}${cpu cpu2}% ${color}
-${offset 5}${voffset 10}CPU(3): ${color4}${freq_g cpu3}ghz${color}${alignr}${cpugraph 10,200 FF9933 99004C cpu cpu3}${color}
-${offset 5}${color2}${cpubar 15,width_cpu_bar cpu3}${alignr 150}${color1}${voffset 5}${cpu cpu3}% ${color}
-${offset 5}${voffset 10}CPU(4): ${color4}${freq_g cpu4}ghz${color}${alignr}${cpugraph 10,200 FF9933 99004C cpu cpu4}${color}
-${offset 5}${color2}${cpubar 15,width_cpu_bar cpu4}${alignr 150}${color1}${voffset 5}${cpu cpu4}% ${color}
-${offset 5}${voffset 10}CPU(5): ${color4}${freq_g cpu5}ghz${color}${alignr}${cpugraph 10,200 FF9933 99004C cpu cpu5}${color}
-${offset 5}${color2}${cpubar 15,width_cpu_bar cpu5}${alignr 150}${color1}${voffset 5}${cpu cpu5}% ${color}
+${offset 5}${voffset 10}${color3}CPU ${color4}${stippled_hr 2}${color}
+${offset 10}${voffset 4}${color3}core0: ${cpugraph 10,160 FF9933 99004C cpu cpu0}${alignr}${color2}${cpu cpu0}% ${color}
+${offset 10}${voffset 15}${color3}core1: ${cpugraph 10,160 FF9933 99004C cpu cpu1}${alignr}${color2}${cpu cpu1}% ${color}
+${offset 10}${voffset 15}${color3}core2: ${cpugraph 10,160 FF9933 99004C cpu cpu2}${alignr}${color2}${cpu cpu2}% ${color}
+${offset 10}${voffset 15}${color3}core3: ${cpugraph 10,160 FF9933 99004C cpu cpu3}${alignr}${color2}${cpu cpu3}% ${color}
+${offset 10}${voffset 15}${color3}core4: ${cpugraph 10,160 FF9933 99004C cpu cpu4}${alignr}${color2}${cpu cpu4}% ${color}
+${offset 10}${voffset 15}${color3}core5: ${cpugraph 10,160 FF9933 99004C cpu cpu5}${alignr}${color2}${cpu cpu5}% ${color}
 #
-${offset 5}${voffset 10}${color3}R.A.M ${color}${color2}${stippled_hr 2}${color}
-${offset 2}${voffset 10}Ram: ${color4}${memmax}${goto 100}${color}em uso: ${color4}${mem}${goto 210}${color}livre: ${color4}${memfree}${color}
-${offset 5}${color2}${membar 20,width_mem_bar}${color}
-${offset 2}Swap: ${color4}${swapmax}${goto 105}${color}em uso: ${color4}${swap}${goto 210}${color}livre: ${color4}${memfree}${color}
-${offset 5}${color2}${swapbar 20,width_swap_bar}${color}
+${offset 5}${voffset 20}${color3}MEMORIA ${color4}${stippled_hr 2}${color}
+${offset 10}${voffset 4}${color3}RAM: ${memgraph 10,160 FF9933 99004C}${alignr}${color2}${memperc}% ${color}
+${offset 10}${voffset 15}${color3}SWAP: ${memgraph 10,160 FF9933 99004C}${alignr}${color2}${swapperc}% ${color}
 #
-${offset 5}${voffset 5}${color3}S.S.D ${color}${color2}${stippled_hr 2}${color}
-${diskiograph_read 10,width_disk_io_graph_read FF9933 99004C /}${color}
-${offset 5}SSDr: ${color4}${diskio_read}${color}
-${diskiograph_write 10,width_disk_io_graph_write FF9933 99004C /}${color}
-${offset 5}SSDw: ${color4}${diskio_write}${color}
-${offset 5}Raiz: ${color4}${fs_size /}${color}${goto 100}${color}em uso: ${color4}${fs_used /}${goto 220}${color}${color}Tipo: ${color4}${fs_type}${color}
+${offset 5}${voffset 12}${color3}SSD ${color4}${stippled_hr 2}${color}
+${offset 10}${voffset 4}${color3}Raiz: ${diskiograph_write 10,85 FF9933 99004C /}${diskiograph_read 10,85 FF9933 99004C /}${alignr}${color2}${fs_used_perc /}% ${color}
 #
-${if_existing /proc/net/route wlan0}
-${offset 5}${voffset -10}${color3}W.I.F.I ${color}${color2}${stippled_hr 2}${color}
-${offset 5}ISP: ${color4}${execi 10000 curl -s http://ipv4.icanhazip.com | tr '[a-z]' '[A-Z]'}${color}${alignr}AP: ${color4}${wireless_ap wlan0}${color}
-${offset 5}ESSID: ${color4}${wireless_essid wlan0}${color}${alignr}Total: ${color4}${totalup wlan0}${color}/${color4}${totaldown wlan0}${color}
-${offset 5}Upload: ${color4}${upspeed wlan0}${color}${goto 164}Download: ${color4}${downspeed wlan0}${color}
-${upspeedgraph wlan0 30,100 FF9933 99004C}${alignr}${downspeedgraph wlan0 30,100 FF9933 99004C}
+${offset 5}${voffset 20}${color3}PROCESSOS ${color4}${stippled_hr 2}${color}
+${offset 10}${voffset 4}${color3}${top_mem name 1}${color2}${alignr}${top_mem mem 1}%
+${offset 10}${color3}${top_mem name 2}${color2}${alignr}${top_mem mem 2}% ${color}
+${offset 10}${color3}${top_mem name 3}${color2}${alignr}${top_mem mem 3}% ${color}
+${offset 10}${color3}${top_mem name 4}${color2}${alignr}${top_mem mem 4}% ${color}
+${offset 10}${color3}${top_mem name 5}${color2}${alignr}${top_mem mem 5}% ${color}
+#
+${offset 10}${if_existing /proc/net/route wlan0}
+${offset 5}${voffset -5}${color3}WIFI ${color4}${stippled_hr 2}${color}
+${offset 10}${voffset 4}${color3}SSID: ${alignr}${color2}${wireless_essid wlan0}
+${offset 10}${voffset 4}${color3}IP: ${alignr}${color2}${addrs wlan0}${color}${font}
+${offset 10}${voffset 4}${color3}ISP: ${alignr}${color2}${execi 10000 curl -s http://ipv4.icanhazip.com | tr '[a-z]' '[A-Z]'}${color}${color}${font}
+${offset 10}${voffset 4}${color3}DL: ${downspeedgraph wlan0 12,100 FF9933 99004C}$alignr}${color2}${downspeed wlan0}Kb/s ${color}
+${offset 10}${voffset 4}${color3}UL: ${upspeedgraph wlan0 12,100 FF9933 99004C}$alignr}${color2}${upspeed wlan0}Kb/s ${color}
 ${else}${if_existing /proc/net/route enp3s0}
-${offset 5}${voffset -10}${color3}R.E.D.E ${color}${color2}${stippled_hr 2}${color}
-${offset 5}IP ISP: ${color4}${execi 10000 curl -s http://ipv4.icanhazip.com | tr '[a-z]' '[A-Z]'}${color}${alignr}Total: ${color4}${totalup enp3s0}${color}/${color4}${totaldown enp3s0}${color}
-${offset 5}Upload: ${color4}${upspeed enp3s0}${color}
-${offset 5}Download: ${color4}${downspeed enp3s0}${color}
-${upspeedgraph enp3s0 30,100 FF9933 99004C}${alignr}${downspeedgraph enp3s0 30,100 FF9933 99004C}
+${offset 5}${voffset -5}${color3}REDE ${color4}${stippled_hr 2}${color}
+${offset 4}${voffset 4}${color3}IP: ${alignr}${color2}${addrs enp3s0}${color}
+${offset 4}${voffset 4}${color3}ISP: ${alignr}${color2}${execi 10000 curl -s http://ipv4.icanhazip.com | tr '[a-z]' '[A-Z]'}${color}
+${offset 4}${voffset 4}${color3}DL: ${downspeedgraph enp3s0 12,100 FF9933 99004C}$alignr}${color2}${downspeed enp3s0}Kb/s ${color}
+${offset 4}${voffset 4}${color3}UL: ${upspeedgraph enp3s0 12,100 FF9933 99004C}$alignr}${color2}${upspeed enp3s0}Kb/s ${color}
 ${endif}${else}
+${offset 5}${voffset -5}${color3}CLIMA ${color4}${stippled_hr 2}${color}
+${offset 5}${voffset 4}${execi 100 ~/.conky/my-weather.sh}
+${offset 5}${voffset 4}${execi 100 ~/.conky/pictograms.sh}${image ~/.cache/weather.png -p 10,708 -s 80x80}
+${offset 100}${voffset -35}${color3}Temperatura atual: ${color2}${execi 50 cat ~/.cache/weather.xml|awk -F'[><]' '{print $24}'|grep value|awk -F'="' '{print $2}'|awk -F'[ "]' '{print $1}'| xargs printf "%.*f\n" "0"}${voffset -5}o${font}${voffset 0} C
+${offset 100}${voffset 10}${color3}Sensação termica: ${color2}${execi 50 cat ~/.cache/weather.xml|awk -F'[><]' '{print $28}'|grep value|awk -F'="' '{print $2}'|awk -F'[ "]' '{print $1}'| xargs printf "%.*f\n" "0"}${voffset -5}o${font}${voffset 0} C
+${offset 100}${voffset 10}${color white}Vento:        ${color2}${execi 50 cat ~/.cache/weather.xml|awk -F'[><]' '{print $42}'|grep value|awk -F'="' '{print $2}'|awk -F'"' '{print $1*3.6}'| xargs printf "%.*f\n" "1"}${voffset 0} km/h${font}
+${offset 100}${voffset 15}${color3}${execi 50 cp -f ~/.conky/weather-icons/wind/$(cat ~/.cache/weather.xml|awk -F'[><]' '{print $50}'|grep code|awk -F'="' '{print $3}'|awk -F'"' '{print $1}').png ~/.cache/wind.png}${image ~/.cache/wind.png -p 135,760 -s 13x13}
+${offset 20}${voffset -25}${color4}${execi 50 cat ~/.cache/weather.xml|awk -F'[><]' '{print $68}'|grep value|awk -F'="' '{print $3}'|awk -F'"' '{print $1}'}
 ]]
