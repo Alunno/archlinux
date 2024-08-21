@@ -81,4 +81,52 @@
     <pcolor>#3071AE</pcolor>
     <scolor>#000000</scolor>
   </wallpaper>
+  <wallpaper deleted="false">
+    <name>Default rain</name>
+    <filename>/usr/share/backgrounds/custom/rain.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#3071AE</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
+    <name>Default rain2</name>
+    <filename>/usr/share/backgrounds/custom/rain2.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#3071AE</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
+    <name>Default metropolitan</name>
+    <filename>/usr/share/backgrounds/custom/metropolitan.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#3071AE</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
+    <name>Default girl_boat</name>
+    <filename>/usr/share/backgrounds/custom/girl_boat.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#3071AE</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
+    <name>Default chainsaw</name>
+    <filename>/usr/share/backgrounds/custom/chainsaw.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#3071AE</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
+  <wallpaper deleted="false">
+    <name>Default indian</name>
+    <filename>/usr/share/backgrounds/custom/indian.png</filename>
+    <options>zoom</options>
+    <shade_type>solid</shade_type>
+    <pcolor>#3071AE</pcolor>
+    <scolor>#000000</scolor>
+  </wallpaper>
 </wallpapers>  
