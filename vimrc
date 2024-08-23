@@ -6,4 +6,4 @@ set autoindent
 set smartindent
 set expandtab
 colorscheme evening
-syntax on
+syntax off
